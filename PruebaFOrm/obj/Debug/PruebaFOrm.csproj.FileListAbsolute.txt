@@ -1,0 +1,9 @@
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\bin\Debug\PruebaFOrm.exe.config
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\bin\Debug\PruebaFOrm.exe
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\bin\Debug\PruebaFOrm.pdb
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\obj\Debug\PruebaFOrm.csprojResolveAssemblyReference.cache
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\obj\Debug\PruebaFOrm.Properties.Resources.resources
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\obj\Debug\PruebaFOrm.csproj.GenerateResource.Cache
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\obj\Debug\PruebaFOrm.exe
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\obj\Debug\PruebaFOrm.pdb
+c:\users\oceiros\documents\visual studio 2015\Projects\PruebaFOrm\PruebaFOrm\obj\Debug\PruebaFOrm.MasterEmpleado.resources

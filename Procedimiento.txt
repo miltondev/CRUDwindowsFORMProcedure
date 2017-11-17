@@ -1,0 +1,52 @@
+USE [FormCrud]
+GO
+/****** Object:  StoredProcedure [dbo].[Sp_GridCrud]    Script Date: 17/11/2017 6:28:23 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROC [dbo].[Sp_GridCrud]  
+(  
+@EmpId int=0,@FirstName varchar(50)=Null,@LastName varchar(50)=Null,@PhoneNumber nvarchar(15)=Null,  
+@IdCargo int=Null,@Event varchar(10),@Buscar varchar(50)=Null  
+)  
+AS   
+BEGIN  
+    IF(@Event='Select')  
+    BEGIN  
+   SELECT Empleado.IdEmpleado,Empleado.NombreE,Empleado.ApellidoE,
+Empleado.Telefono,Cargo.Cargo FROM Empleado 
+inner join Cargo on Empleado.IdCargo = Cargo.IdCargo ORDER BY Empleado.NombreE ASC  
+
+    END  
+  
+    ELSE IF(@Event='Add')  
+    BEGIN  
+    INSERT INTO Empleado (NombreE,ApellidoE,Telefono,IdCargo) VALUES(@FirstName,@LastName,@PhoneNumber,@IdCargo);  
+    END  
+  
+    ELSE IF(@Event='Update')  
+    BEGIN  
+    UPDATE Empleado SET NombreE=@FirstName,ApellidoE=@LastName,Telefono=@PhoneNumber,IdCargo=@IdCargo where Empleado.IdEmpleado=@EmpId;  
+    END  
+
+	ELSE IF(@Event='Search')  
+    BEGIN  
+    SELECT Empleado.IdEmpleado,Empleado.NombreE,Empleado.ApellidoE,
+Empleado.Telefono,Cargo.Cargo FROM Empleado 
+inner join Cargo on Empleado.IdCargo = Cargo.IdCargo where Empleado.NombreE like '%'+@Buscar+'%' ORDER BY Empleado.NombreE ASC  
+
+    END  
+
+
+	ELSE IF(@Event='Combobox')  
+    BEGIN  
+        SELECT * from Cargo order by Cargo.Cargo ASC
+    END  
+  
+    ELSE  
+    BEGIN  
+    DELETE FROM Employee WHERE Id=@EmpId;  
+    END  
+END  
+  
